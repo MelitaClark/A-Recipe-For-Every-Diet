@@ -71,10 +71,10 @@ animation-iteration-count: infinite;
 }
 
 label{
-font-family: 'Roboto', sans-serif;
+font-family: 'Lilita One', cursive;
 font-weight:900;
 font-size: large;
-color: rgb(94, 102, 95);
+background-color: #eee;
 
 
 }
