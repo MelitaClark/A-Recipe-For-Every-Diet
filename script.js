@@ -16,12 +16,6 @@ function formatQueryParams(params){
 function getRecipesURL(diet, mealType){
   const params = {
     'q': `${diet}  ${mealType || ''}`,
-    //'part':'snippet', 
-    //'maxResults':25,
-    // 'app_id': '6b4121ea',
-    // 'app_key': '6abe9c73f0d4fae10461f81eb26ce3c0',
-    
-    //'thumbnails': 'url',
     
   };
 
@@ -31,7 +25,7 @@ console.log('URL:', url);
 
 const myResults=$('#search-output') 
 myResults.empty()
-// $('#js-error-message').hide()
+
 $('#js-error-message').text('Loading, please wait...')
    fetch(url)
     .then(response => {
@@ -66,10 +60,7 @@ function displayResults(dataArr){
   const itemIterator = item=>{
     const recipeObj = item.recipe;
     const ingredientsHTML = recipeObj.ingredients.map(ingredientObj=>`<li>${ingredientObj.text}</li>`)
-    /*const showIngredients= $('a').on('click', function() {
-      $(this).toggleClass(function(){
-        return ingredientsHTML
-      }); */
+
 
     myResults.append(
     `<section class="card">

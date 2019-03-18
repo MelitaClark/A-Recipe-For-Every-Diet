@@ -1,5 +1,3 @@
-/* fix lity to makae iframes taller */
-
 .lity-iframe-container{
   padding-top:0;
   height:80vh;
@@ -12,8 +10,6 @@ box-sizing: border-box;
 body{
 background-image: url(ProjectBackground.jpg); background-repeat: no-repeat;
 background-size: cover;
-/* height:100vh;   */
-/* width:100vw;   */
 overflow:hidden;
 margin:0;
 text-align: center;
