@@ -13,18 +13,18 @@ and either, click on the first anchor link which will open a light box to the ac
 -----------------------------
 Let's search for gluten-free diet options: 
 
-<img src="appImage.png" height= "500" width="500">
+<img src="appImage.png" height= "500" width="800">
 
 --------------------------------
 Let's take a look at the full details of the recipe page: 
 
-<img src="snapShot1.png" height= "500" width="500">
+<img src="snapShot1.png" height= "500" width="800">
                                           
 
 ---------------------------------
 Or, maybe we just what a list of necessary ingredients: 
 
-<img src="snapShot2.png" height= "500" width="500">
+<img src="snapShot2.png" height= "500" width="800">
                                           
 
 -----------------------------------
