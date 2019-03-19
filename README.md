@@ -10,5 +10,25 @@ This app allows the user to select their specific diet type from the drop-down m
 meal type (i.e., breakfast, lunch, dinner). Once the results appear, the user can browse through, select a recipe of choice
 and either, click on the first anchor link which will open a light box to the acutal sites details about the recipe or click on the second hyperlink to reveal a drop-down for the recipes ingredients list. 
 
+-----------------------------
+Let's search for gluten-free diet options: 
 
 <img src="appImage.png">
+
+--------------------------------
+Let's take a look at the full details of the recipe page: 
+
+<img src="snapShot1">
+
+---------------------------------
+Or, maybe we just what a list of necessary ingredients: 
+
+<img src="snapShot2">
+
+-----------------------------------
+
+Technology used: 
+- HTML
+- CSS
+- JavaScript
+- JQuery
