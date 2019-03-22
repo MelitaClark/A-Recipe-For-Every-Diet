@@ -15,7 +15,6 @@ margin:0;
 text-align: center;
 }
 #scroller{
-  /* height:100vh; */
   overflow-y:scroll;    
 }
 
@@ -83,7 +82,7 @@ line-height: 1.5em;
   height: 30px;
   padding-bottom: 2%;
   font-family: 'Lilita One', cursive;
-  font-size: 30px;
+  font-size: 2vw;
   text-align: center;
 }
 .blue{
