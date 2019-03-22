@@ -1,93 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>repl.it</title>
-    <link href="lity.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
-    
-  </head>
-  <body>
-  <div class="wrapper">
-    
-    <div class="box box-fixed">
-      <div class="header">
-        <h1>Recipes For Every Diet</h1>
+
+<head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>repl.it</title>
+      <link href="lity.css" rel="stylesheet">
+      <link href="styles.css" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
+</head>
+
+<body>
+      <div class="wrapper">
+            <div class="box box-fixed">
+                  <div class="header">
+                        <h1>Recipes For Every Diet</h1>
+                  </div>
+            </div>
+            <div class="box box-fixed">
+                  <section>
+                        <div class="container">
+                              <form id="js-form">
+                                    <div id="first">
+                                          <label for="search-diet">Select <span class="blue"> Diet Type</span>
+                                                (i.e.,"vegan"):</label>
+                                          <select name="search-meal" id="js-search-diet">
+                                                <option value="vegan">Vegan</option>
+                                                <option value="keto">Keto</option>
+                                                <option value="zone-diet">Zone</option>
+                                                <option value="vegetarian">Vegetarian</option>
+                                                <option value="weightWatchers">Weight Watchers</option>
+                                                <option value="southBeach-diet">South Beach</option>
+                                                <option value="raw-diet">Raw</option>
+                                                <option value="gluten-free">Gluten-free</option>
+                                                <option value="dairy-free">Dairy-free</option>
+                                                <option value="mediterranean-diet">Mediterranean</option>
+                                                <option value="pescatarian-diet">Pescatarian</option>
+                                          </select>
+                                    </div>
+                                    <div id="second">
+                                          <label for="search-meal">Select<span class="blue"> Meal Type</span>
+                                                (i.e.,"breakfast"):</label>
+                                          <select name="search-meal" id="js-search-meal">
+                                                <option value="">none</option>
+                                                <option value="breakfast">breakfast</option>
+                                                <option value="lunch">lunch</option>
+                                                <option value="dinner">dinner</option>
+                                                <option value="snack">snack</option>
+                                          </select>
+                                    </div>
+                                    <br><input type="submit" value="Go!" id="submitButton">
+                        </div>
+                        </form>
+            </div>
+            <p id="js-error-message" class="error-message"></p>
+            <section id="resultsSection" class="box box-expanding">
+                  <div id="resultsHeader">
+                        <h2>Search Results</h2>
+                        <input type="reset" value="Clear Results" onclick="reloadThePage()" />
+                  </div>
+                  <div id="scroller">
+                        <div id="search-output" class="grid"></div>
+            </section>
+            <footer class="box box-fixed"> <br></br> </footer>
       </div>
-    </div>
-
-  <div class="box box-fixed">
-    <section>
-		  <div class="container">
-
-		
-				<form id="js-form">
-          
-        
-        <div id="first">
-            <label for="search-diet">Select <span class="blue"> Diet Type</span> (i.e.,"vegan"):</label>
-
-            <select  name="search-meal" id="js-search-diet">
-                <option value="vegan">Vegan</option>
-                <option value="keto">Keto</option>
-                <option value="zone-diet">Zone</option>
-                <option value="vegetarian">Vegetarian</option>
-                <option value="weightWatchers">Weight Watchers</option>
-                <option value="southBeach-diet">South Beach</option>
-                <option value="raw-diet">Raw</option>
-                <option value="gluten-free">Gluten-free</option>
-                <option value="dairy-free">Dairy-free</option>
-                <option value="mediterranean-diet">Mediterranean</option>
-                <option value="pescatarian-diet">Pescatarian</option>
-            </select>
-          </div>
-        
-          <div id="second">
-            <label for="search-meal">Select<span class="blue"> Meal Type</span> (i.e.,"breakfast"):</label>
-
-            <select  name="search-meal" id="js-search-meal">
-                <option value="">none</option>
-                <option value="breakfast">breakfast</option>
-                <option value="lunch">lunch</option>
-                <option value="dinner">dinner</option>
-                <option value="snack">snack</option>
-            </select>
-          
-          </div>
-          
-          
-           <br><input type="submit" value="Go!"id= "submitButton">
-           
-          </div>
-        </form>
-			</div>
-  
-  
-      
-
-       <p id="js-error-message" class="error-message"></p>
-
-        <section id="resultsSection" class="box box-expanding">
-          <div id="resultsHeader" >  
-          <h2>Search Results</h2>
-          <input type="reset" value="Clear Results" onclick="reloadThePage()" />
-        </div>
-        	<div id="scroller">
-          <div id="search-output"class="grid"></div>
-          
-        </section>
-        <footer class="box box-fixed"> <br></br> </footer>
-		</div>
-  </div>
-</div>
-</div>
-
-<div class="box box-fixed"><br></br></div>
+      </div>
+      </div>
+      </div>
+      <div class="box box-fixed"><br></br></div>
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.js"></script>  
-    <script src="script.js"></script>
-  </body>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.js"></script>
+      <script src="dataStore.js"></script>
+      <script src="script.js"></script>
+</body>
+
 </html>
