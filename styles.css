@@ -53,11 +53,7 @@ overflow-y: auto;
 h1{
 margin: 0;
 font-family: 'Special Elite', cursive , sans-serif;
-text-shadow: 5px 5px 10px white;
-background: rgb(197, 245, 227);
-animation-name: colorChange;
-animation-duration: 10s;
-animation-iteration-count: infinite;
+text-shadow: 5px 5px 10px rgb(96, 189, 240);
 }
 @keyframes colorChange {
   0%   {background-color: #edf3f8b9;}
@@ -69,16 +65,53 @@ animation-iteration-count: infinite;
 label{
 font-family: 'Lilita One', cursive;
 font-weight:900;
-font-size: large;
-background-color: #eee;
-
-
+font-size: 30px;
+width: 2em;
+line-height: 1.5em;
+}
+::placeholder {
+  color:#cbd0d5;
+  text-align: center;
+}
+.userInput:hover{
+  border-color:blue;
+}
+.userInput{
+  border: 2px outset;
+  border-radius: 9999em;
+  width: 200px;
+  height: 30px;
+  padding-bottom: 2%;
+  font-family: 'Lilita One', cursive;
+  font-size: 30px;
+  text-align: center;
 }
 .blue{
-color: blue;
+color: rgb(39, 39, 245);
+text-shadow: 2px 2px black;
 }
 form{
 padding-bottom: 10px;
+box-shadow: 5px 10px rgb(111, 110, 110);
+}
+#js-form{
+  background-color: linear-gradient(21deg, #10abff, #1beabd);
+  background-image:url(white-cloud-background-8.jpg);
+  border-radius: 9999em;
+  background-position: center bottom;
+  animation: animatedBackground 10s linear infinite;
+  /* Safari and Chrome: */
+  -webkit-animation: animatedBackground 10s linear infinite;
+}
+@keyframes animatedBackground 
+{
+  from { background-position: 0 100%; }
+  to { background-position: 100% 100%; }
+}
+@-webkit-keyframes  animatedBackground 
+{
+  from { background-position: 0 100%; }
+  to { background-position: 100% 100%; }
 }
 
 #first{
@@ -91,10 +124,6 @@ padding-top: 2%;
 padding-left: 2%;
  display: inline-block;
 }
-#js-search-meal{
-padding-bottom: 2%;
-}
-
 
 
 #search-output{
@@ -145,23 +174,32 @@ padding-top: 20%;
 }
 
 #submitButton{
-background-color: rgba(98, 98, 107, 0.87);
-color: white;
-margin-top: 2%;
-width: 100px;
-height: 25px;
-border: 2px ridge black;
-border-radius: 10%;
-}
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+    height: 50px;
+    font-size: 20px;
+    font-family: Helvetica;
+    border-bottom: 5px solid steelblue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(#5FDDFF,#53ADDF);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px grey;
+    transition: 150ms ease;
+    font-weight: bold;
+  }
+  
+  input[type="submit"]:active{
+    border: none;
+    border-bottom: 2px solid steelblue;
+    box-shadow: 0px 1px 5px grey;
+    background: linear-gradient(#53AFFF,#5FCDFF);
+    color: #FFF;
+  }
 
-/*.grid{
-display:flex;
-flex-wrap: wrap;
-flex-direction:column;
-}
-#result{
-flex:1;
-}*/
 
 /*The Responsive Design...*/
 @media only screen and (min-width:768px){
