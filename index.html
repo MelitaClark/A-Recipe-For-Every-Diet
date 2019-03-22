@@ -25,30 +25,13 @@
                                     <div id="first">
                                           <label for="search-diet">Select <span class="blue"> Diet Type</span>
                                                 (i.e.,"vegan"):</label>
-                                          <select name="search-meal" id="js-search-diet">
-                                                <option value="vegan">Vegan</option>
-                                                <option value="keto">Keto</option>
-                                                <option value="zone-diet">Zone</option>
-                                                <option value="vegetarian">Vegetarian</option>
-                                                <option value="weightWatchers">Weight Watchers</option>
-                                                <option value="southBeach-diet">South Beach</option>
-                                                <option value="raw-diet">Raw</option>
-                                                <option value="gluten-free">Gluten-free</option>
-                                                <option value="dairy-free">Dairy-free</option>
-                                                <option value="mediterranean-diet">Mediterranean</option>
-                                                <option value="pescatarian-diet">Pescatarian</option>
-                                          </select>
+                                          <input type="text" name="search-diet" id="js-search-diet" required>
                                     </div>
+
                                     <div id="second">
                                           <label for="search-meal">Select<span class="blue"> Meal Type</span>
                                                 (i.e.,"breakfast"):</label>
-                                          <select name="search-meal" id="js-search-meal">
-                                                <option value="">none</option>
-                                                <option value="breakfast">breakfast</option>
-                                                <option value="lunch">lunch</option>
-                                                <option value="dinner">dinner</option>
-                                                <option value="snack">snack</option>
-                                          </select>
+                                          <input type="text" name="search-meal" id="js-search-meal" />
                                     </div>
                                     <br><input type="submit" value="Go!" id="submitButton">
                         </div>
