@@ -158,13 +158,61 @@ div.result{
 background-position: center;
 display:block;
 }
-
-
+.refreshMe{
+  display: block;
+    margin: 0 auto;
+    width: 30%;
+    height: 30px;
+    font-size: 15px;
+    font-family: Helvetica;
+    border-bottom: 5px solid steelblue;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: linear-gradient(#5FDDFF,#53ADDF);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px grey;
+    transition: 150ms ease;
+    font-weight: bold;
+  }
+  
+  input[type="reset"]:active{
+    border: none;
+    border-bottom: 2px solid steelblue;
+    box-shadow: 0px 1px 5px grey;
+    background: linear-gradient(#53AFFF,#5FCDFF);
+    color: #FFF;
+}
 h2{
+  text-shadow: 5px 5px 10px white;
+}
+
+#resultsHeader{
+
+line-height: 2em;
 font-family: 'Special Elite', cursive, sans-serif;
 flex:none;
+background-color: linear-gradient(21deg, #10abff, #1beabd);
+background-image:url(white-cloud-background-8.jpg);
+border-radius: 9999em;
+background-position: center bottom;
+animation: animatedBackground 10s linear infinite;
+/* Safari and Chrome: */
+-webkit-animation: animatedBackground 10s linear infinite;
+}
+@keyframes animatedBackground 
+{
+from { background-position: 0 100%; }
+to { background-position: 100% 100%; }
+}
+@-webkit-keyframes  animatedBackground 
+{
+from { background-position: 0 100%; }
+to { background-position: 100% 100%; }
 
 }
+
 strong{
 color: rgb(241, 149, 106);
 }

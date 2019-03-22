@@ -49,6 +49,8 @@ function getRecipesURL(diet, mealType) {
 }
 
 function displayResults(dataArr) {
+    $('#js-form').remove();
+    $('#resultsSection').css('display', 'block');
     const myResults = $('#search-output')
     myResults.empty()
     $('#resultsHeader').show()
