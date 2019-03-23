@@ -146,7 +146,9 @@ padding-left: 2%;
 -moz-box-shadow: 9px 10px 21px -4px rgba(0,0,0,0.75);
 box-shadow: 9px 10px 21px -4px rgba(0,0,0,0.75);
 }
-
+#hideHttp{
+  font-size: 0;
+}
 div.result{
  background-size: 80%;
  height:100vw;  
