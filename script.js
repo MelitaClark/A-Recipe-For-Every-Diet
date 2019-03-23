@@ -62,12 +62,9 @@ function displayResults(dataArr) {
 
         myResults.append(
             `<section class="card">
-        <div class="result" style="background-image:url('${recipeObj.image}'); height:200px;"></div>
-
-        <p class="urlInfo"> 
-        <a href="${recipeObj.shareAs.replace('http://', 'https://')}" data-lity>${recipeObj.label}</a>
-                            
-        </p>
+            <a href="${recipeObj.shareAs.replace('http://', 'https://')}" data-lity>${recipeObj.image}
+            <div class="result" style="background-image:url('${recipeObj.image}'); height:200px;"></div>
+            </a>
   <nav> <a class="toggle-ingredients" href="#">Click Here To See Ingredients List</a>
     <ul class="description ingredients-list">
         ${ingredientsHTML}
