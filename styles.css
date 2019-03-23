@@ -14,9 +14,6 @@ overflow:hidden;
 margin:0;
 text-align: center;
 }
-#scroller{
-  overflow-y:scroll;    
-}
 
 .ingredients-list {
 overflow:hidden;
@@ -82,7 +79,7 @@ line-height: 1.5em;
   height: 30px;
   padding-bottom: 2%;
   font-family: 'Lilita One', cursive;
-  font-size: 2vw;
+  font-size: inherit;
   text-align: center;
 }
 .blue{
@@ -154,7 +151,7 @@ div.result{
  background-size: 80%;
  height:100vw;  
  margin: 0;
- background-repeat: no-repeat;
+background-repeat: no-repeat;
 background-position: center;
 display:block;
 }
@@ -258,14 +255,9 @@ padding-top: 20%;
 .wrapper{
 
 max-width:100%;
-
-
 }
 
-/* .grid .result .urlInfo .description{
-  grid-column-end: span 1;
-  grid-row-end: span 3;
-}*/
+
 }
 @media screen and (min-width:1024px){
 .grid{
