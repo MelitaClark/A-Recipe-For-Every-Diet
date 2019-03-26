@@ -57,6 +57,7 @@ function displayResults(dataArr) {
             <a id="hideHttp" href="${recipeObj.shareAs.replace('http://', 'https://')}" data-lity>${recipeObj.image}
             <div class="result" style="background-image:url('${recipeObj.image}'); height:200px;"></div>
             </a>
+            <p id ="recipeName" role="label">${recipeObj.label}</p>
          <nav>
          <button >Click For Ingredients List</button>
   </nav>
