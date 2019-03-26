@@ -9,26 +9,21 @@ function formatQueryParams(params) {
     console.log(' params', myQuery)
     return myQuery.join('&');
 }
-
 function getRecipesURL(diet, mealType) {
     const params = {
         'q': `${diet}  ${mealType || ''}`,
-
     };
     const queryString = formatQueryParams(params)
     const url = BASE_URL + '&' + queryString;
     console.log('URL:', url);
-
     const myResults = $('#search-output')
     myResults.empty()
-
     $('#js-error-message').text('Loading, please wait...')
     fetch(url)
         .then(response => {
             if (response.ok) {
                 return response.json();
             }
-
             throw new Error(response.statusText);
         })
         .then(responseJson => {
@@ -40,14 +35,12 @@ function getRecipesURL(diet, mealType) {
             $('#js-error-message').hide()
             displayResults(responseJson.hits)
         })
-
         .catch(err => {
             console.error(err)
             $('#js-error-message').text(`Something went wrong: ${err.message}`);
 
         });
 }
-
 function displayResults(dataArr) {
     $('#js-form').remove();
     $('#resultsSection').css('display', 'block');
@@ -55,25 +48,24 @@ function displayResults(dataArr) {
     myResults.empty()
     $('#resultsHeader').show()
 
+    showModal();
+    hideModal();
     const itemIterator = item => {
         const recipeObj = item.recipe;
         const ingredientsHTML = recipeObj.ingredients.map(ingredientObj => `<li>${ingredientObj.text}</li>`)
-
-
-        myResults.append(
-            `<section class="card">
+        const result = $(`<section class="card">
             <a id="hideHttp" href="${recipeObj.shareAs.replace('http://', 'https://')}" data-lity>${recipeObj.image}
             <div class="result" style="background-image:url('${recipeObj.image}'); height:200px;"></div>
             </a>
-  <nav> <a class="toggle-ingredients" href="#">Click Here To See Ingredients List</a>
-    <ul class="description ingredients-list">
-        ${ingredientsHTML}
-    </ul>
+         <nav>
+         <button >Click For Ingredients List</button>
   </nav>
-    
-
-    </section>
-    `)
+     </section>`)
+        $(result).find('button').click(() => {
+            showModal()
+            $('#modal_box_message').html(ingredientsHTML)
+        })
+        myResults.append(result)
     }
     dataArr.forEach(itemIterator)
 }
@@ -81,17 +73,18 @@ function displayResults(dataArr) {
 function reloadThePage() {
     window.location.reload();
 }
+//Code for ModalBox Ingredients List
+//Show ModalBox...
+function showModal() {
+    $("#modal_box").css("display", "block");
+    $("#modal_wrapper").css("display", "block");
+}
+// Hide our modal box...
+function hideModal() {
+    $("#modal_box").css("display", "none");
+    $("#modal_wrapper").css("display", "none");
+}
 function watchForm() {
-
-    $('body').on('click', '.toggle-ingredients', event => {
-        event.preventDefault()
-        console.log('clicked', event)
-        $(event.target)
-            .parent().find('.ingredients-list')
-            .toggleClass('ingredients-list-visible')
-
-    })
-
     $('form').submit(event => {
         event.preventDefault();
         const dietStr = $('#js-search-diet').val();
@@ -100,5 +93,4 @@ function watchForm() {
     });
     $('#resultsHeader').hide()
 }
-
 $(watchForm);

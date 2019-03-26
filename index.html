@@ -19,40 +19,57 @@
                   </div>
             </div>
             <div class="box box-fixed">
-                  
-                        <div class="container">
-                              <form id="js-form">
-                                    <div id="first">
-                                          <label for="search-diet">Enter <span class="blue"> Diet Type</span>
-                                                :</label>
-                                          <input type="text" name="search-diet" id="js-search-diet" class="userInput" placeholder="vegan" required>
-                                    </div>
 
-                                    <div id="second" >
-                                          <label for="search-meal">Enter<span class="blue"> Meal Type</span>
-                                                :</label>
-                                          <input type="text" name="search-meal" id="js-search-meal" class="userInput" placeholder="breakfast"/>
-                                    </div>
-                                    <br><input type="submit" value="Submit!" id="submitButton">
-                        </div>
-                        </form>
+                  <div class="container">
+                        <form id="js-form">
+                              <div id="first">
+                                    <label for="search-diet">Enter <span class="blue"> Diet Type</span>
+                                          :</label>
+                                    <input type="text" name="search-diet" id="js-search-diet" class="userInput"
+                                          placeholder="vegan" required>
+                              </div>
+
+                              <div id="second">
+                                    <label for="search-meal">Enter<span class="blue"> Meal Type</span>
+                                          :</label>
+                                    <input type="text" name="search-meal" id="js-search-meal" class="userInput"
+                                          placeholder="breakfast" />
+                              </div>
+                              <br><input type="submit" value="Submit!" id="submitButton">
+                  </div>
+                  </form>
             </div>
             <p id="js-error-message" class="error-message"></p>
             <section id="resultsSection" class="box box-expanding">
                   <div id="resultsHeader">
                         <h2>Search Results</h2>
                         <input class="refreshMe" type="reset" value="Clear Results" onclick="reloadThePage()" />
-                        
+
                   </div>
                   <div id="scroller">
                         <div id="search-output" class="grid"></div>
             </section>
-            <footer class="box box-fixed"> <br></br> </footer>
+
+            <!-- <footer class="box box-fixed"> <br></br> </footer>-->
       </div>
       </div>
       </div>
       </div>
-      <div class="box box-fixed"><br></br></div>
+      <div class="box box-fixed">
+            <br>
+            <br>
+      </div>
+      <div id='modal_wrapper' class='modal_wrapper' style="display:none;"></div>
+      <div id="modal_box" class="modal_box" style="display: none;">
+            <div id="modal_box_close" class="modal_box_close" onclick="hideModal()">X</div>
+            <div id="modal_box_title" class="modal_box_title">Ingredients List</div>
+            <div id="modal_box_message" class="modal_box_message">
+            </div>
+            <div id="modal_box_footer" class="modal_box_footer">
+                  <div class='button' onclick='hideModal()'>OK</div>
+            </div>
+      </div>
+
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.js"></script>
       <script src="dataStore.js"></script>
