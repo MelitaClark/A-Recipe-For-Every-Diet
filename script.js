@@ -53,15 +53,20 @@ function displayResults(dataArr) {
     const itemIterator = item => {
         const recipeObj = item.recipe;
         const ingredientsHTML = recipeObj.ingredients.map(ingredientObj => `<li>${ingredientObj.text}</li>`)
-        const result = $(`<section class="card">
-            <a id="hideHttp" href="${recipeObj.shareAs.replace('http://', 'https://')}" data-lity>${recipeObj.image}
+        
+        //create an element tree (a jQuery object) from the HTML string
+        const result = $(
+    `<section class="card">
+            <a class="hideHttp" href="${recipeObj.shareAs.replace('http://', 'https://')}" data-lity>${recipeObj.image}
             <div class="result" style="background-image:url('${recipeObj.image}'); height:200px;"></div>
             </a>
-            <p id ="recipeName" role="label">${recipeObj.label}</p>
+            <p class="recipeName">${recipeObj.label}</p>
          <nav>
          <button >Click For Ingredients List</button>
-  </nav>
+         </nav>
      </section>`)
+     
+        //attach a click handler to the button element within the tree
         $(result).find('button').click(() => {
             showModal()
             $('#modal_box_message').html(ingredientsHTML)
@@ -77,13 +82,13 @@ function reloadThePage() {
 //Code for ModalBox Ingredients List
 //Show ModalBox...
 function showModal() {
-    $("#modal_box").css("display", "block");
-    $("#modal_wrapper").css("display", "block");
+    $("#modal_box").show();
+    $("#modal_wrapper").show();
 }
 // Hide our modal box...
 function hideModal() {
-    $("#modal_box").css("display", "none");
-    $("#modal_wrapper").css("display", "none");
+    $("#modal_box").hide();
+    $("#modal_wrapper").hide();
 }
 function watchForm() {
     $('form').submit(event => {
