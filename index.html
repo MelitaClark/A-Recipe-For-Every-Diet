@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Recipes For Every Diet - a diet based recipe finder</title>
-      <link href="lity.css" rel="stylesheet">
-      <link href="styles.css" rel="stylesheet" type="text/css" />
+      <link href="css/lity.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet" type="text/css" />
       <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Lilita+One" rel="stylesheet">
 </head>
 
 <body>
-      <div class="wrapper">
+      <main class="wrapper">
             <div class="box box-fixed">
                   <div class="header">
                         <h1>Recipes For Every Diet</h1>
@@ -21,16 +21,16 @@
             <div class="box box-fixed">
 
                   <div class="container">
-                        <form id="js-form">
+                        <form id="js-form" role="search">
                               <div id="first">
-                                    <label for="search-diet">Enter <span class="blue"> Diet Type</span>
+                                    <label for="js-search-diet">Enter <span class="blue"> Diet Type</span>
                                           :</label>
                                     <input type="text" name="search-diet" role="textbox" id="js-search-diet"
                                           class="userInput" placeholder="vegan" required>
                               </div>
 
                               <div id="second">
-                                    <label for="search-meal">Enter<span class="blue"> Meal Type</span>
+                                    <label for="js-search-meal">Enter<span class="blue"> Meal Type</span>
                                           :</label>
                                     <input type="text" name="search-meal" role="textbox" id="js-search-meal"
                                           class="userInput" placeholder="breakfast" />
@@ -49,14 +49,15 @@
                   <div id="scroller">
                         <div id="search-output" class="grid"></div>
             </section>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class="box box-fixed">
-            <br>
-            <br>
-      </div>
+            </div>
+            </div>
+            </div>
+            <footer class="box box-fixed">
+                  <a href="https://github.com/MelitaClark/A-Recipe-For-Every-Diet" target="_blank">View source on
+                        Github</a>
+            </footer>
+      </main>
+
       <div id='modal_wrapper' class='modal_wrapper' style="display:none;"></div>
       <div id="modal_box" class="modal_box" style="display: none;">
             <div id="modal_box_close" class="modal_box_close" onclick="hideModal()">X</div>
