@@ -8,7 +8,7 @@
 }
 
 body {
-  background-image: url('ProjectBackground.jpg');
+  background-image: url('./images/project-background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -103,7 +103,7 @@ form {
 
 #js-form {
   background-color: linear-gradient(21deg, #10abff, #1beabd);
-  background-image: url(white-cloud-background-8.jpg);
+  background-image: url('./images/white-cloud-background-8.jpg');
   border-radius: 9999em;
   background-position: center bottom;
   animation: animatedBackground 10s linear infinite;
